@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.appContainer {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 3fr;
+
+    //sidebar
+    .sidebar {
+        width: 250px;
+        background-color: $color-main;
+        color: #646262;
+        padding: 20px;
+
+        .user__info {
+            position: absolute;
+            bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            background-color: $color-main-hover;
+            padding: 0.2rem 1.8rem;
+            border-radius: 5px;
+
+            .user__img {
+                height: 2rem;
+                width: 2rem;
+                object-fit: cover;
+                border-radius: 50%;
+                align-self: center;
+            }
+
+            span {
+                cursor: pointer;
+                align-self: center;
+            }
+        }
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .navMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menuItem {
+        color: $color-menuitem;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-main-hover;
+        }
+
+        &.active {
+            background-color: $color-main-hover;
+        }
+    }
+
+    .main__container {
+        .statsContainer {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-evenly;
+            margin-top: 1.8rem;
+
+            .statCard {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: $box-shadow1;
+                width: 15rem;
+
+                h3 {
+                    font-size: 1rem;
+                    margin: 0 0 1rem 0;
+                    color: $color-card-title;
+                }
+
+                p {
+                    font-size: 24px;
+                    margin: 0;
+                    font-weight: bold;
+                    color: $color-card-text;
+                }
+            }
+        }
+
+        .employee__data_section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1.8rem 3.6rem;
+
+            .todays__attendance {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: $box-shadow1;
+
+                .disabled {
+                    cursor: not-allowed;
+                    opacity: 0.5;
+                }
+
+                h3 {
+                    color: $color-card-title;
+                    font-size: 1rem;
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    color: $color-card-text;
+                    font-size: 0.8rem;
+                }
+
+                .action {
+                    display: flex;
+                    gap: 1rem;
+
+                    button {
+                        padding: 0.5rem 4rem;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+                    }
+
+                    button:first-child {
+                        background-color: $color-green;
+                        color: white;
+                    }
+
+                    button:last-child {
+                        background-color: $color-red;
+                        color: white;
+                    }
+                }
+            }
+
+            .payroll__container {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: $box-shadow1;
+
+                h3 {
+                    color: $color-card-title;
+                    font-size: 1rem;
+                }
+
+                p {
+                    color: $color-card-text;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+}
