@@ -51,6 +51,11 @@ const CreateEmployee = () => {
             body: formData,
             redirect: "follow"
         }).then(async (res) => {
+            if (res.status === 401) {
+                localStorage.removeItem("authData");
+                localStorage.removeItem("user");
+                window.location.reload();
+            }
             if (!res.ok) {
                 throw new Error(await res.text());
             }
