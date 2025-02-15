@@ -2,27 +2,109 @@
 	"info": {
 		"_postman_id": "b4ceff25-4679-460a-b4bd-44be17b450c3",
 		"name": "K&A HRMS",
-		"description": "This is HRMS backend application postman collection.",
+		"description": "This is HRMS backend application's postman collection.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "17954471",
-		"_collection_link": "https://dark-spaceship-279366.postman.co/workspace/Team-Workspace~45b580cf-2718-4942-81b4-a5b447336746/collection/17954471-b4ceff25-4679-460a-b4bd-44be17b450c3?action=share&source=collection_link&creator=17954471"
+		"_collection_link": "https://dark-spaceship-279366.postman.co/workspace/45b580cf-2718-4942-81b4-a5b447336746/collection/17954471-b4ceff25-4679-460a-b4bd-44be17b450c3?action=share&source=collection_link&creator=17954471"
 	},
 	"item": [
 		{
 			"name": "Create User",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA3NDExZDc1NWFmYzk4MWIwYjg2OSIsImlhdCI6MTczOTYyODA4MSwiZXhwIjoxNzM5NzEwODgxfQ.MgBAu_FefwHJhObznlwX4M4-65LpMkerteiE_3z0N8k"
+					}
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"name\": \"Sourashis Paul\",\n  \"email\": \"sourashis@hrms.ai\",\n  \"phone\": \"9876543210\",\n  \"password\": \"SecurePass123\",\n  \"isAdmin\": true,\n  \"aadharNo\": \"123456789012\",\n  \"panNo\": \"ABCDE1234F\",\n  \"bankAccountNumber\": \"123456789012\",\n  \"ifscCode\": \"SBIN0001234\",\n  \"bankName\": \"State Bank of India\",\n  \"emergencyContact\": \"9876543211\",\n  \"baseSalary\": 50000,\n  \"reportingManager\": \"65f2bca1d4e9b9e7d4f8c123\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sundar Pichai",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sundar@hrms.ai",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9876543210",
+							"type": "text"
+						},
+						{
+							"key": "designation",
+							"value": "CFO",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "Finance",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "SecurePass123",
+							"type": "text"
+						},
+						{
+							"key": "aadharNo",
+							"value": "765412345543",
+							"type": "text"
+						},
+						{
+							"key": "panNo",
+							"value": "HGTEE7750K",
+							"type": "text"
+						},
+						{
+							"key": "bankName",
+							"value": "SBI",
+							"type": "text"
+						},
+						{
+							"key": "bankAccountNumber",
+							"value": "76543210",
+							"type": "text"
+						},
+						{
+							"key": "ifscCode",
+							"value": "SBIN00123",
+							"type": "text"
+						},
+						{
+							"key": "emergencyContact",
+							"value": "9876543210",
+							"type": "text"
+						},
+						{
+							"key": "baseSalary",
+							"value": "200000",
+							"type": "text"
+						},
+						{
+							"key": "reportingManager",
+							"value": "elon@hrms.ai",
+							"type": "text"
+						},
+						{
+							"key": "isAdmin",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/sourashispaul/Downloads/sundar.jpg"
 						}
-					}
+					]
 				},
-				"url": "https://api-hrms-data.onrender.com/api/user/create"
+				"url": "https://api-hrms-data.onrender.com/api/admin/createuser"
 			},
 			"response": []
 		},
@@ -36,7 +118,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"elon@hrms.ai\",\n    \"password\": \"SecurePass123\"\n}",
+					"raw": "{\n    \"email\": \"sundar@hrms.ai\",\n    \"password\": \"SecurePass123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -53,7 +135,7 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjAzOTkxMzE3OTBjZjhkMjlmMWNkMiIsImlhdCI6MTczOTYwMzE0MiwiZXhwIjoxNzM5Njg1OTQyfQ.XlSru5t7nX1P3rClj6Bg5h86ZR2gu3GV4f8uODPypmY"
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA0NTI3NTJjYmJiMDk1Zjc4YzhlYSIsImlhdCI6MTczOTYxOTUxNSwiZXhwIjoxNzM5NzAyMzE1fQ.VQ_Do3GODuowXFx3QZsNyeqdrbvDv9qFK0zFP4x1EbY"
 					}
 				},
 				"method": "GET",
@@ -98,12 +180,90 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA0NTI3NTJjYmJiMDk1Zjc4YzhlYSIsImlhdCI6MTczOTYyMTEyMywiZXhwIjoxNzM5NzAzOTIzfQ.Nh0TU9Dymlkn7J1-zzlL7-dhVxLsnmuuX3755iqMoss"
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA3NDExZDc1NWFmYzk4MWIwYjg2OSIsImlhdCI6MTczOTYyNzcyOSwiZXhwIjoxNzM5NzEwNTI5fQ.ZXPs2rjooW0He5452NGPc0IIjboxDQKA4uySPx7BZng"
 					}
 				},
 				"method": "GET",
 				"header": [],
 				"url": "https://api-hrms-data.onrender.com/api/leavedata"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateLeave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA5ZTUwYjk4NDcyMjgxZTk4MzQyNSIsImlhdCI6MTczOTYyODE1MiwiZXhwIjoxNzM5NzEwOTUyfQ.N4ysfU5NQ7_Cqb9LZVIa1Bu3Qr1dmn4bmIR-G6ra_ew"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\":\"DateObj\",\n    \"endDate\": \"DateObj\",\n    \"reason\": \"String\",\n    \"type\": \"Sick Leave\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-hrms-data.onrender.com/api/createleave"
+			},
+			"response": []
+		},
+		{
+			"name": "All Employees",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA5ZTUwYjk4NDcyMjgxZTk4MzQyNSIsImlhdCI6MTczOTYyODE1MiwiZXhwIjoxNzM5NzEwOTUyfQ.N4ysfU5NQ7_Cqb9LZVIa1Bu3Qr1dmn4bmIR-G6ra_ew"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://api-hrms-data.onrender.com/api/allemployees"
+			},
+			"response": []
+		},
+		{
+			"name": "Leaves Need to Take Action",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA5ZTUwYjk4NDcyMjgxZTk4MzQyNSIsImlhdCI6MTczOTYyODE1MiwiZXhwIjoxNzM5NzEwOTUyfQ.N4ysfU5NQ7_Cqb9LZVIa1Bu3Qr1dmn4bmIR-G6ra_ew"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://api-hrms-data.onrender.com/api/admin/leavesforaction"
+			},
+			"response": []
+		},
+		{
+			"name": "Leave Approve/Reject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA5ZTUwYjk4NDcyMjgxZTk4MzQyNSIsImlhdCI6MTczOTYyODE1MiwiZXhwIjoxNzM5NzEwOTUyfQ.N4ysfU5NQ7_Cqb9LZVIa1Bu3Qr1dmn4bmIR-G6ra_ew"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"leaveId\": \"String\",\n    \"status\": \"Approved/Rejected\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-hrms-data.onrender.com/api/admin/leaveaction"
 			},
 			"response": []
 		}
