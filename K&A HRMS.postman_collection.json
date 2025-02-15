@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "b4ceff25-4679-460a-b4bd-44be17b450c3",
+		"name": "K&A HRMS",
+		"description": "This is HRMS backend application postman collection.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17954471",
+		"_collection_link": "https://dark-spaceship-279366.postman.co/workspace/Team-Workspace~45b580cf-2718-4942-81b4-a5b447336746/collection/17954471-b4ceff25-4679-460a-b4bd-44be17b450c3?action=share&source=collection_link&creator=17954471"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Sourashis Paul\",\n  \"email\": \"sourashis@hrms.ai\",\n  \"phone\": \"9876543210\",\n  \"password\": \"SecurePass123\",\n  \"isAdmin\": true,\n  \"aadharNo\": \"123456789012\",\n  \"panNo\": \"ABCDE1234F\",\n  \"bankAccountNumber\": \"123456789012\",\n  \"ifscCode\": \"SBIN0001234\",\n  \"bankName\": \"State Bank of India\",\n  \"emergencyContact\": \"9876543211\",\n  \"baseSalary\": 50000,\n  \"reportingManager\": \"65f2bca1d4e9b9e7d4f8c123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-hrms-data.onrender.com/api/user/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"elon@hrms.ai\",\n    \"password\": \"SecurePass123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-hrms-data.onrender.com/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "UserInfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjAzOTkxMzE3OTBjZjhkMjlmMWNkMiIsImlhdCI6MTczOTYwMzE0MiwiZXhwIjoxNzM5Njg1OTQyfQ.XlSru5t7nX1P3rClj6Bg5h86ZR2gu3GV4f8uODPypmY"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://api-hrms-data.onrender.com/api/userinfo"
+			},
+			"response": []
+		},
+		{
+			"name": "CheckIn",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA0NTI3NTJjYmJiMDk1Zjc4YzhlYSIsImlhdCI6MTczOTYyMTEyMywiZXhwIjoxNzM5NzAzOTIzfQ.Nh0TU9Dymlkn7J1-zzlL7-dhVxLsnmuuX3755iqMoss"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://api-hrms-data.onrender.com/api/checkin"
+			},
+			"response": []
+		},
+		{
+			"name": "CheckOut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA0NTI3NTJjYmJiMDk1Zjc4YzhlYSIsImlhdCI6MTczOTYyMTEyMywiZXhwIjoxNzM5NzAzOTIzfQ.Nh0TU9Dymlkn7J1-zzlL7-dhVxLsnmuuX3755iqMoss"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://api-hrms-data.onrender.com/api/checkout"
+			},
+			"response": []
+		},
+		{
+			"name": "Leaves of a User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjA0NTI3NTJjYmJiMDk1Zjc4YzhlYSIsImlhdCI6MTczOTYyMTEyMywiZXhwIjoxNzM5NzAzOTIzfQ.Nh0TU9Dymlkn7J1-zzlL7-dhVxLsnmuuX3755iqMoss"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://api-hrms-data.onrender.com/api/leavedata"
+			},
+			"response": []
+		}
+	]
+}
